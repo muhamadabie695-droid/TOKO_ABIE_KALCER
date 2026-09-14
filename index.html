@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Kalcer - Iwak Gatul, Klepon & Topi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">TOKO KALCER</div>
+
+        <div class="nav-menu">
+            <a href="#home">Home</a>
+            <a href="#produk">Produk</a>
+            <a href="#tentang">Tentang</a>
+            <button onclick="bukaKeranjang()">
+                🛒 Keranjang <span id="jumlahKeranjang">0</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="hero-text">
+            <p class="label">SELAMAT DATANG 👋</p>
+            <h1>Jajan Enak,<br><span>Gaya Makin Kalcer.</span></h1>
+            <p>
+                Nikmati Iwak Gatul, Klepon tradisional, dan Topi Kalcer
+                dengan kualitas terbaik.
+            </p>
+            <a href="#produk" class="btn">Belanja Sekarang</a>
+        </div>
+    </section>
+
+    <!-- PRODUK -->
+    <section class="produk-section" id="produk">
+        <h2>Produk Kami</h2>
+        <p class="subjudul">Pilih produk favoritmu</p>
+
+        <div class="produk-container">
+
+            <!-- IWAK GATUL -->
+            <div class="produk">
+                <div class="gambar-produk">
+                    <img src="iwak-gatul.jpg" alt="Iwak Gatul">
+                </div>
+                <div class="produk-info">
+                    <h3>Iwak Gatul</h3>
+                    <p>Ikan gatul dengan rasa gurih dan nikmat.</p>
+                    <div class="produk-bawah">
+                        <span>Rp10.000</span>
+                        <button onclick="tambahKeranjang('Iwak Gatul', 10000)">
+                            + Keranjang
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- KLEPON -->
+            <div class="produk">
+                <div class="gambar-produk">
+                    <img src="klepon.jpg" alt="Klepon">
+                </div>
+                <div class="produk-info">
+                    <h3>Klepon</h3>
+                    <p>Klepon tradisional dengan isian gula merah.</p>
+                    <div class="produk-bawah">
+                        <span>Rp8.000</span>
+                        <button onclick="tambahKeranjang('Klepon', 8000)">
+                            + Keranjang
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TOPI -->
+            <div class="produk">
+                <div class="gambar-produk">
+                    <img src="topi-kalcer.jpg" alt="Topi Kalcer">
+                </div>
+                <div class="produk-info">
+                    <h3>Topi Kalcer</h3>
+                    <p>Topi keren untuk melengkapi gaya sehari-hari.</p>
+                    <div class="produk-bawah">
+                        <span>Rp35.000</span>
+                        <button onclick="tambahKeranjang('Topi Kalcer', 35000)">
+                            + Keranjang
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- TENTANG -->
+    <section class="tentang" id="tentang">
+        <h2>Tentang Kami</h2>
+        <p>
+            Toko Kalcer menyediakan makanan tradisional dan fashion
+            kekinian dengan harga terjangkau. Cocok untuk ngemil,
+            oleh-oleh, maupun dipakai sehari-hari.
+        </p>
+    </section>
+
+    <!-- MODAL KERANJANG -->
+    <div id="modalKeranjang" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="tutupKeranjang()">&times;</span>
+
+            <h2>🛒 Keranjang Belanja</h2>
+
+            <div id="isiKeranjang"></div>
+
+            <div class="total">
+                Total: <strong id="totalHarga">Rp0</strong>
+            </div>
+
+            <button class="pesan" onclick="085143882102">
+                Pesan via WhatsApp
+            </button>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Toko Kalcer | Iwak Gatul • Klepon • Topi Kalcer</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
