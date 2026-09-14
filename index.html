@@ -259,7 +259,6 @@
         </div>
     </nav>
 
-
     <!-- HERO -->
     <section class="hero" id="home">
 
@@ -278,7 +277,6 @@
 
     </section>
 
-
     <!-- PRODUK -->
     <section class="produk-section" id="produk">
 
@@ -286,7 +284,6 @@
             <h2>Produk Kami</h2>
             <p>Pilih produk favoritmu!</p>
         </div>
-
 
         <div class="produk-container">
 
@@ -317,7 +314,6 @@
                 </div>
             </div>
 
-
             <!-- KLEPON -->
             <div class="produk">
 
@@ -344,7 +340,6 @@
 
                 </div>
             </div>
-
 
             <!-- TOPI KALCER -->
             <div class="produk">
@@ -376,7 +371,6 @@
         </div>
     </section>
 
-
     <!-- KERANJANG -->
     <section class="keranjang" id="keranjang">
 
@@ -396,7 +390,6 @@
 
     </section>
 
-
     <!-- TENTANG -->
     <section class="tentang">
 
@@ -410,7 +403,6 @@
 
     </section>
 
-
     <!-- FOOTER -->
     <footer>
 
@@ -420,12 +412,10 @@
 
     </footer>
 
-
     <!-- JAVASCRIPT -->
     <script>
 
         let keranjang = [];
-
 
         function tambahKeranjang(nama, harga) {
 
@@ -441,14 +431,12 @@
             );
         }
 
-
         function hapusProduk(index) {
 
             keranjang.splice(index, 1);
 
             tampilkanKeranjang();
         }
-
 
         function tampilkanKeranjang() {
 
@@ -462,7 +450,6 @@
 
             let jumlahTotal = 0;
 
-
             if (keranjang.length === 0) {
 
                 daftar.innerHTML =
@@ -472,7 +459,6 @@
 
                 return;
             }
-
 
             keranjang.forEach(function(produk, index) {
 
@@ -500,11 +486,9 @@
 
             });
 
-
             total.innerText =
                 "Rp" + jumlahTotal.toLocaleString("id-ID");
         }
-
 
         function pesanWhatsApp() {
 
@@ -517,12 +501,10 @@
                 return;
             }
 
-
             let pesan =
                 "Halo, saya ingin memesan:%0A%0A";
 
             let jumlahTotal = 0;
-
 
             keranjang.forEach(function(produk, index) {
 
@@ -538,22 +520,15 @@
 
             });
 
-
             pesan +=
                 "%0ATotal: Rp" +
                 jumlahTotal.toLocaleString("id-ID");
 
-
             // Nomor WhatsApp
-            let nomor =
-                "6285143882102";
-
+            let nomor = "6285143882102";
 
             window.open(
-                "https://wa.me/" 6285143882102
-                nomor 6285143882102
-                "?text=" +
-                pesan,
+                "https://wa.me/" + nomor + "?text=" + pesan,
                 "_blank"
             );
 
